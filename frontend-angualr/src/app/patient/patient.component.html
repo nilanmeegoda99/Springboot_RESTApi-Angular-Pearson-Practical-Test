@@ -1,0 +1,58 @@
+
+<div id="wrapper">
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><img class="img-fluid" src="assets/pearson.jpg" height="119px" width="140px">
+                    <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group"></div>
+                    </form>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <h3 class="text-dark mb-4">Covid 19 - Patients Tracker for Pearson Practical Test by Nilan Meegoda</h3>
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <p class="text-primary m-0 font-weight-bold">Patients' Details&nbsp;</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                           
+                            
+                        </div>
+                        <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                            <table class="table my-0" id="dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Patient ID</th>
+                                        <th>Patient Name</th>
+                                        <th>Address</th>
+                                        <th>Contact Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor = "let patient of patients">
+                                        <td>{{patient.id}}</td>
+                                        <td>{{patient.patient_name}}</td>
+                                        <td>{{patient.patient_address}}</td>
+                                        <td>{{patient.contact_no}}</td>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr></tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <br>
+       <br>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>Copyright © Nilan Meegoda |Pearson Practical Test</span></div>
+            </div>
+        </footer>
+    </div>
+</div>
